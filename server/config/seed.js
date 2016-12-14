@@ -16,11 +16,36 @@ User.find({}).remove()
   .then(() => {
     User.create({
       provider: 'local',
+      role: 'student',
       name: 'Test User',
       email: 'test@example.com',
       password: 'test',
       school: 'school 1',
       studentId: 123
+    },{
+      provider: 'local',
+      role: 'student',
+      name: 'Bobby',
+      email: 'bobby@example.com',
+      password: 'bobby',
+      school: 'school 1',
+      studentId: 124
+    },{
+      provider: 'local',
+      role: 'student',
+      name: 'Tim',
+      email: 'tim@example.com',
+      password: 'tim',
+      school: 'school 1',
+      studentId: 125
+    },{
+      provider: 'local',
+      role: 'student',
+      name: 'Suzy',
+      email: 'suzy@example.com',
+      password: 'suzy',
+      school: 'school 1',
+      studentId: 126
     }, {
       provider: 'local',
       role: 'admin',

@@ -25,3 +25,14 @@
 .navbar-text {
   margin-left: 15px;
 }
+
+.student .header {
+  background-color: rgba(242, 242, 242, 1);
+  box-sizing: border-box;
+  border-color: rgba(0, 51, 204, 1);
+}
+
+.student .header .student-name {
+  position: relative;
+  float: left;
+}
