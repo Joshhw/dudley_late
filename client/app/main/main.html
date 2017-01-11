@@ -11,14 +11,12 @@
 
     <div class="student panel panel-default" ng-repeat="user in vm.students">
       <div class="panel-heading">
-        <span class="student-name"> {{user.name}} </span>
+        <span class="student-name"> {{user.name}} is {{user.lateTime ? 'late by ' + user.lateTime + ' minutes' : 'on time'}} </span>
         <button class="btn btn-default">Change Routes</button>
         <button class="btn btn-danger">Delete</button>
       </div>
       <div class="panel-body status-box">
-        <p>This student would have taken the 7:40 bus from Poplar Street</p>
-        <p>The 7:40 bus from Poplar Street arrived at Forest Hills at 7:49 with no delay</p>
-        <p>From there it's a 9 minute walk to school, so the estimated arrival time is 8:56</p>
+        <p ng-repeat="comment in user.lateComments">{{comment}}</p>
       </div>
       <div class="panel-footer route-info">
         View Route Info

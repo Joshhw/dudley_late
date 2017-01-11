@@ -21,7 +21,17 @@ User.find({}).remove()
       email: 'test@example.com',
       password: 'test',
       school: 'school 1',
-      studentId: 123
+      studentId: 123,
+      lateTime: 20,
+      lateComments: [
+        'This student would have taken the 7:40 bus from Poplar Street',
+        'The 7:40 bus from Poplar Street arrived at Forest Hills at 7:49 with no delay',
+        'This student would have then taken the 7:55 train from Forest Hills',
+        'The 7:55 train from Forest Hills arrived 20 minutes late to Ruggles at 8:26',
+        'This student would have then taken the 8:35 bus from Ruggles',
+        'The 8:35 bus from Ruggles arrived at Dudley Street at Adams at 8:47',
+        'From there its a 9 minute walk to school, so the estimated arrival time is 8:56'
+      ]
     },{
       provider: 'local',
       role: 'student',
@@ -29,7 +39,17 @@ User.find({}).remove()
       email: 'bobby@example.com',
       password: 'bobby',
       school: 'school 1',
-      studentId: 124
+      studentId: 124,
+      lateTime: 10,
+      lateComments: [
+        'This student would have taken the 7:35 bus from Poplar Street',
+        'The 7:35 bus from Poplar Street arrived at Forest Hills at 7:44 with no delay',
+        'This student would have then taken the 7:50 train from Forest Hills',
+        'The 7:50 train from Forest Hills arrived 15 minutes late to Ruggles at 8:16',
+        'This student would have then taken the 8:25 bus from Ruggles',
+        'The 8:35 bus from Ruggles arrived at Dudley Street at Adams at 8:37',
+        'From there its a 9 minute walk to school, so the estimated arrival time is 8:46'
+      ]
     },{
       provider: 'local',
       role: 'student',
@@ -37,7 +57,17 @@ User.find({}).remove()
       email: 'tim@example.com',
       password: 'tim',
       school: 'school 1',
-      studentId: 125
+      studentId: 125,
+      lateTime: 5,
+      lateComments: [
+        'This student would have taken the 7:40 bus from Poplar Street',
+        'The 7:40 bus from Poplar Street arrived at Forest Hills at 7:49 with no delay',
+        'This student would have then taken the 7:55 train from Forest Hills',
+        'The 7:55 train from Forest Hills arrived 15 minutes late to Ruggles at 8:21',
+        'This student would have then taken the 8:35 bus from Ruggles',
+        'The 8:35 bus from Ruggles arrived at Dudley Street at Adams at 8:42',
+        'From there its a 9 minute walk to school, so the estimated arrival time is 8:51'
+      ]
     },{
       provider: 'local',
       role: 'student',
@@ -45,7 +75,17 @@ User.find({}).remove()
       email: 'suzy@example.com',
       password: 'suzy',
       school: 'school 1',
-      studentId: 126
+      studentId: 126,
+      lateTime: 0,
+      lateComments: [
+        'This student would have taken the 7:40 bus from Poplar Street',
+        'The 7:40 bus from Poplar Street arrived at Forest Hills at 7:49 with no delay',
+        'This student would have then taken the 7:55 train from Forest Hills',
+        'The 7:55 train from Forest Hills arrived 5 minutes late to Ruggles at 8:11',
+        'This student would have then taken the 8:35 bus from Ruggles',
+        'The 8:35 bus from Ruggles arrived at Dudley Street at Adams at 8:22',
+        'From there its a 9 minute walk to school, so the estimated arrival time is 8:31'
+      ]
     }, {
       provider: 'local',
       role: 'admin',
