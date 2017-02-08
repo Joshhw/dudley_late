@@ -14,13 +14,25 @@ server/config/environment/development.js  set seedDB:true
 - [MongoDB](https://www.mongodb.org/) - Keep a running daemon with `mongod`
 
 ### Developing
+First, istall [Docker Toolbox](https://docker.com/toolbox).
 
-1. Run `npm install` to install server dependencies.
+```bash
+# Create a VM to run the app in, isolated from other projects
+$ docker-machine create -d virtualbox dudley-late
 
-2. Run `mongod` in a separate shell to keep an instance of the MongoDB Daemon running
+# Set your shell's env vars to point to the new VM (do this for any new shell)
+$ eval "$(docker-machine env dudley-late)"
 
-3. Run `gulp serve` to start the development server. It should automatically open the client in your browser when ready.
+# Create the docker containers and start the app
+$ docker-compose up
+```
+
+Then open [dudley-late.local](http://dudley-late.local) to see the project
+locally.
 
 ## Testing
 
-Running `npm test` will run the unit tests with karma.
+```bash
+# Run the unit tests
+$ docker-compose run server npm test
+```
