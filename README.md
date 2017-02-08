@@ -9,26 +9,22 @@ server/config/environment/development.js  set seedDB:true
 ### Prerequisites
 
 - [Git](https://git-scm.com/)
-- [Node.js and npm](nodejs.org) Node ^4.2.3, npm ^2.14.7
-- [Gulp](http://gulpjs.com/) (`npm install --global gulp`)
-- [MongoDB](https://www.mongodb.org/) - Keep a running daemon with `mongod`
+- [Node.js and npm](nodejs.org)
+- [Gulp](http://gulpjs.com/)
+- [MongoDB](https://www.mongodb.org/)
 
 ### Developing
-First, istall [Docker Toolbox](https://docker.com/toolbox).
+First, install [Docker](https://docs.docker.com/engine/installation/).
 
 ```bash
-# Create a VM to run the app in, isolated from other projects
-$ docker-machine create -d virtualbox dudley-late
-
-# Set your shell's env vars to point to the new VM (do this for any new shell)
-$ eval "$(docker-machine env dudley-late)"
-
 # Create the docker containers and start the app
 $ docker-compose up
 ```
 
-Then open [dudley-late.local](http://dudley-late.local) to see the project
-locally.
+Then open [localhost:9000](http://localhost:9000) to see the project locally.
+
+(It's quite convenient to alias `docker-compose` to `dc` in your bash or zsh
+rc file.)
 
 ## Testing
 
