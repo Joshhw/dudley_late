@@ -3,7 +3,7 @@ services:
     avahi:
         image: 'enernoclabs/avahi:v1'
         network_mode: 'host'
-        restart: 'on-failure'
+        restart: 'always'
         logging:
             driver: 'none'
     mongo:
