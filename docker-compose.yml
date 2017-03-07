@@ -1,0 +1,17 @@
+version: '2'
+services:
+    mongo:
+        image: 'mongo'
+        logging:
+            driver: 'none'
+    server:
+        build: '.'
+        command: 'gulp serve'
+        ports:
+            - '9000:9000'
+        volumes:
+            - '/src/client/bower_components'
+            - '/src/node_modules'
+            - './:/src'
+        links:
+            - 'mongo'
