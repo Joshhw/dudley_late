@@ -9,18 +9,26 @@ server/config/environment/development.js  set seedDB:true
 ### Prerequisites
 
 - [Git](https://git-scm.com/)
-- [Node.js and npm](nodejs.org) Node ^4.2.3, npm ^2.14.7
-- [Gulp](http://gulpjs.com/) (`npm install --global gulp`)
-- [MongoDB](https://www.mongodb.org/) - Keep a running daemon with `mongod`
+- [Node.js and npm](nodejs.org)
+- [Gulp](http://gulpjs.com/)
+- [MongoDB](https://www.mongodb.org/)
 
 ### Developing
+First, install [Docker](https://docs.docker.com/engine/installation/).
 
-1. Run `npm install` to install server dependencies.
+```bash
+# Create the docker containers and start the app
+$ docker-compose up
+```
 
-2. Run `mongod` in a separate shell to keep an instance of the MongoDB Daemon running
+Then open [localhost:9000](http://localhost:9000) to see the project locally.
 
-3. Run `gulp serve` to start the development server. It should automatically open the client in your browser when ready.
+(It's quite convenient to alias `docker-compose` to `dc` in your bash or zsh
+rc file.)
 
 ## Testing
 
-Running `npm test` will run the unit tests with karma.
+```bash
+# Run the unit tests
+$ docker-compose run server npm test
+```

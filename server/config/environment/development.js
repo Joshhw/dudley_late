@@ -1,12 +1,21 @@
 'use strict';
-const config = require('../local.env');
+
+let config;
+
+try {
+    config = require('../local.env');
+} catch(e) {
+    config = {};
+}
+
+
 // Development specific configuration
 // ==================================
 module.exports = {
 
   // MongoDB connection options
   mongo: {
-    uri: config.mongoDev
+    uri: config.mongoDev || 'mongo'
   },
 
   // Seed database on startup
